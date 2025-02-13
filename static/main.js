@@ -56,7 +56,18 @@ var peer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
     port: "3030",
+    config: {
+        iceServers: [
+            { urls: "stun:stun.l.google.com:19302" }, // Google's public STUN server
+            {
+                urls: "turn:relay.backups.cz",
+                username: "webrtc",
+                credential: "webrtc",
+            }, // Public TURN server (use a paid TURN server for reliability)
+        ],
+    },
 });
+
 
 let myVideoStream;
 const peers = {};
