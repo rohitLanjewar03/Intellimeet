@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IntelliMeet</title>
+    <!-- Include Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+      rel="stylesheet"
+    />
+    <!-- Updated CSS path -->
+    <link rel="stylesheet" href="/public/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Spline Viewer: Import the module -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.66/build/spline-viewer.js"></script>
+
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <!-- You can replace the src with your own logo image -->
+          <img
+            src="/public/logo.png"
+            alt="Meet Clone Logo"
+            onerror="this.style.display='none'"
+          />
+          <span>IntelliMeet</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Features</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Spline Viewer Section -->
+    <div class="spline-container">
+      <spline-viewer url="https://prod.spline.design/JOtgkuqPa2MnHPYJ/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <div class="Name-Page">
+        <div class="form">
+          <!-- Host a Meeting Form -->
+          <form class="known-form" action="/join">
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              required
+            />
+            <button type="submit">Host a Meeting</button>
+            <p><a href="javascript:show()">Join Meeting?</a></p>
+          </form>
+          <!-- Join an Existing Meeting Form -->
+          <form class="unknown-form" action="/joinold">
+            <input
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter Meeting Id"
+              name="meeting_id"
+              required
+            />
+            <button type="submit">Join Meeting</button>
+            <p><a href="javascript:show()">Host Meeting?</a></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2025 Meet Clone. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Help</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function show() {
+        $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+      }
+    </script>
+  </body>
+</html>

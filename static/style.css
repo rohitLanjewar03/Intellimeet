@@ -1,0 +1,207 @@
+style.css
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #0a0a0a; /* Light gray background */
+    color: #202124;           /* Google grey text color */
+  }
+  
+  /* Centered container for the name forms */
+  .Name-Page {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 10%;
+    text-align: center;
+  }
+  
+  /* Form wrapper */
+  .form {
+    .form {
+      background: #bbb9b9;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+      margin-bottom: 20px;
+      border: 1px solid #1a73e8;
+    }
+    
+     /* Added border */
+  }
+  
+  
+  /* Form inputs: simple, clean borders */
+  .form input {
+    width: 100%;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #202124;
+  }
+  
+  /* Buttons: Google-blue style */
+  .form button {
+    width: 106%;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin: 0 auto; /* centers the button if container is narrower */
+    display: block;
+  }
+  
+  
+  .form button:hover {
+    background-color: #4285f4;
+  }
+  
+  /* Small text/links below buttons */
+  .form p {
+    margin: 8px 0 0;
+    font-size: 19px;
+    
+  }
+  
+  /* Links */
+  .form a {
+    color: #1a73e8;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .form a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  /* Hidden by default; toggled by JS */
+  .unknown-form {
+    display: none;
+  }
+  /* -------------------------- */
+/* Header Styles              */
+/* -------------------------- */
+header {
+    background: #1a73e8;
+    color: #fff;
+    padding: 15px 20px;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #e8eaed;
+  }
+  
+  /* -------------------------- */
+  /* Main Content Adjustments   */
+  /* -------------------------- */
+  .Name-Page {
+    width: 400px;
+    margin: 40px auto;  /* Added margin for breathing room */
+    padding-top: 20px;
+  }
+  
+  /* (Existing form styles remain here.) */
+  
+  /* -------------------------- */
+  /* Footer Styles              */
+  /* -------------------------- */
+  footer {
+    background: #171717;
+    color: #f6f7fb;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    color: #1a73e8;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #0c47a1;
+  }
+  /* Spline Scene Container */
+.spline-container {
+    width: 100%;
+    height: 500px; /* Adjust height as desired */
+    overflow: hidden;
+    margin-bottom: 40px; /* Space between the Spline scene and the main content */
+  }
+  
+  .spline-container spline-viewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  
+  /* -------------------------- */
+  /* Responsive Adjustments     */
+  /* -------------------------- */
+  @media screen and (max-width: 768px) {
+    .header-container,
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-links a,
+    .footer-links a {
+      margin: 5px;
+    }
+  }
